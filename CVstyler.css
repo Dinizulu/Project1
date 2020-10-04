@@ -16,15 +16,18 @@ h1{
   font-size: 2.7em;
   font-weight: 700;
 }
-.Side{
+#Side{
   position: fixed;
-  right: 0px;
+  right: -150px;
   width: 150px;
-  height: 100vh;
+  height: 100%;
   background: #000;
   transition: .6s;
 }
-.Side a{
+#Side.active{
+  right: 0;
+}
+#Side a{
   padding: 5px 5px 5px 28px;
   text-decoration: none;
   font-size: 24px;
@@ -32,10 +35,10 @@ h1{
   display: block;
   transition: 0.8;
 }
-.Side a:hover{
+#Side a:hover{
   color: #f1f1f1;
 }
-.Side ul li{
+#Side ul li{
   list-style: none;
 }
 .toggler span{
@@ -45,7 +48,7 @@ h1{
   display: block;
   margin-top: 3px;
 }
-.Side .toggler{
+#Side .toggler{
   position: absolute;
   top: 0px;
   left: -35px;

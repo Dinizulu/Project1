@@ -5,16 +5,37 @@
     <title>TechnicalCV</title>
     <link rel="stylesheet" href="CVstyler.css">
   </head>
-  <body>
+  <body onload="typeWrite()">
+    <script type="text/javascript">
+      var i =0;
+      var txt = 'Welcome to the online resume Of Mr Dinizulu';
+      var speed = 170;
+
+      function typeWrite(){
+        if(i < txt.length){
+          document.getElementById('Welcome').innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWrite,speed);
+        }
+      }
+    </script>
 
     <section class="Back1">
-      <h1>Welcome to the online resume <br> Of <br><span id="Hsize"> Mr Dinizulu </span></h1>
-      <div class="Side">
-        <div class="toggler">
+      <h1 id="Welcome"></h1>
+
+      <script type="text/javascript">
+				function Show(){
+					document.getElementById('Side').classList.toggle('active');
+				}
+			</script>
+
+      <div id="Side">
+        <div class="toggler" onclick="Show()">
           <span></span>
           <span></span>
           <span></span>
         </div>
+
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -48,6 +69,8 @@
           </div>
       </div>
     </section>
+
+
 
   </body>
 </html>
