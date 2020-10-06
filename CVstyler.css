@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
 }
+.Home{
+  position: relative;
+  min-height: 100vh;
+  background: url(https://source.unsplash.com/user/Dinizulu/Rpz-455NaQw/1400*600);
+  background-size: cover;
+}
 h1{
   color: blue;
   size: 5em;
@@ -12,14 +18,14 @@ h1{
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
 }
-.Back1 h1{
+.Home h1{
   font-size: 2.7em;
   font-weight: 700;
 }
 #Side{
   position: fixed;
-  right: -150px;
-  width: 150px;
+  right: -180px;
+  width: 180px;
   height: 100%;
   background: #000;
   transition: .6s;
@@ -51,13 +57,29 @@ h1{
 #Side .toggler{
   position: absolute;
   top: 0px;
-  left: -35px;
+  left: -38px;
   display: block;
 }
 
-/* Skills Styling*/
+/* About Styling*/
+.About{
+  position: relative;
+  min-height: 100vh;
+  background: url(https://source.unsplash.com/user/Dinizulu/2gvzKeuh4MM/1400*600);
+  background-size: cover;
+}
+
+/*Skills Styling*/
+.Skills{
+  position: relative;
+  min-height: 100vh;
+  background: url(https://source.unsplash.com/user/Dinizulu/2gvzKeuh4MM/1400*600);
+  background-size: cover;
+}
 h2{
   text-align: center;
+  font-style: italic;
+  font-size: 30px;
 }
 .main{
   margin-top: 0;
@@ -70,16 +92,75 @@ h2{
   width: 50%;
   background-color: #D2D7D3;
   margin-left: 25%;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 .Skill{
   text-align: right;
-  padding: 12px;
+  padding: 10px;
   padding-bottom: 10px;
   color: white;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 .javascript{
   width: 50%;
   background-color: #33FF57;
+}
+/*Projects Styling*/
+.Projects{
+  position: relative;
+  min-height: 100vh;
+  background: url(https://source.unsplash.com/user/Dinizulu/YLxVlTsCqs8);
+  background-size: cover;
+}
+.Projects h1{
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 900;
+  color: #fff;
+}
+
+/*Contact Styler*/
+.Contact{
+  position: relative;
+  min-height: 100vh;
+  background: url(https://source.unsplash.com/user/Dinizulu/JjSoCnYrpno);
+  background-size: cover;
+}
+.MsgBox form h3, .ContactInfo h3{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.heading h2{
+  color: #fff;
+  font-style: italic;
+}
+.heading p{
+  text-align: center;
+  padding-top: 25px;
+  font-size: 25px;
+  color: #fff;
+}
+.MsgBox form input{
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+}
+.MsgBox{
+  right: 50px;
+  top: 100px;
+  position: absolute;
+  min-width: 50%;
+  min-height: 100vh;
+  float: right;
+  justify-content: left;
+}
+.MsgBox form{
+  display: flex;
+  flex-direction: column;
 }
