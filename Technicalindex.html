@@ -21,7 +21,9 @@
       }
     </script>
 
-    <section class="Home">
+    <header>
+
+    <section class="Home" id="home">
       <h1 id="Welcome"></h1>
 
       <script type="text/javascript">
@@ -29,26 +31,20 @@
 					document.getElementById('Side').classList.toggle('active');
 				}
 			</script>
-
-      <div id="Side">
-        <div class="toggler" onclick="Show()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Project Worked</a></li>
-          <li><a href="#">Interests</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+      <nav>
+      <ul id="Menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     </section>
 
-    <section class="About">
+  </header>
+
+    <section class="About" id="about">
       <div class="Heading">
         <h2>About Me</h2>
       </div>
@@ -64,21 +60,46 @@
       </div>
     </section>
 
-    <section class="Skills">
+    <section class="Skills" id="skills">
       <div class="main">
-        <h2>My Skills</div>
+        <h2>My Skills</h2>
+          <h3>HTML</h3>
+          <div class="Cont">
+            <div class="Skill html"></div>
+          </div>
+          <h3>CSS</h3>
+          <div class="Cont">
+            <div class="Skill css"></div>
+          </div>
           <h3>Java Script</h3>
           <div class="Cont">
             <div class="Skill javascript"></div>
           </div>
+          <h3>Java Object Oriented</h3>
+          <div class="Cont">
+            <div class="Skill java"></div>
+          </div>
+          <h3>C# ASP.net Framework</h3>
+          <div class="Cont">
+            <div class="Skill asp"></div>
+          </div>
+          <h3>Data Visualization</h3>
+          <div class="Cont">
+            <div class="Skill data"></div>
+          </div>
+          <h3>Databases</h3>
+          <div class="Cont">
+            <div class="Skill database"></div>
+          </div>
       </div>
     </section>
 
-    <section class="Projects">
+    <section class="Projects" id="projects">
       <h1>Watch The Space...</h1>
+      <h2>Project Worked On</h2>
     </section>
 
-    <section class="Contact">
+    <section class="Contact" id="contact">
   <div class="heading">
     <h2>Contact</h2>
     <p>Your Feedback Will Be Highly Appreciated</p>
@@ -115,10 +136,11 @@
       </div>
     </div>
     <div class="MsgBox">
-      <form>
+      <form id="form">
         <h3>Send Message</h3>
         <input type="text" name="" placeholder="Full Name">
-        <input type="email" name="" placeholder="Email">
+        <input type="text" name="" id="email" placeholder="Enter Email" onkeydown="Validate()">
+        <span id="word"></span>
         <textarea placeholder="Comments"></textarea>
         <input type="submit" value="Send">
       </form>
@@ -126,7 +148,30 @@
   </div>
 </section>
 
+<script type="text/javascript">
+function Validate(){
+  var form = document.getElementById('form');
+  var email = document.getElementById('email').value;
+  var text = document.getElementById('text');
+  var pattern = /^[^]+@[^]+\.[A-Z]{2,3}$/;
 
+  if(email.match(pattern))
+  {
+    form.classList.add("valid");
+    form.classList.remove("invalid");
+    text.innerHTML="Valid";
+    text.style.color = "#00ff00";
+  }
+  else {
+    form.classList.remove("valid");
+    form.classList.add("invalid");
+    text.innerHTML="Incorre Email";
+    text.style.color = "#ff0000";
+
+  }
+
+}
+</script>
 
   </body>
 </html>
